@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: @font-primary;
+}
+
+a {
+  color: @color-3;
+
+  &:hover {
+    color: lighten(@color-3, 8%);
+  }
+}
+
+p {
+  color: darken(@color-1, 8%);
+  hyphens: auto;
+  width: 100%;
+}

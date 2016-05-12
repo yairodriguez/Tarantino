@@ -1,0 +1,137 @@
+.good-ideas {
+  display: none;
+
+  @media (min-width: 900px) {
+    width: 33.3333333%;
+    display: block;
+  }
+}
+
+.pics {
+  display: flex;
+  margin-bottom: 25px;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 900px) {
+    margin-bottom: 85px;
+    width: 66.6666666%;
+  }
+}
+
+.photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .caption {
+      @media (min-width: 900px) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &:not(:last-of-type) { margin-right: 8px; }
+
+  @media (min-width: 600px) {
+    height: 320px;
+  }
+
+  @media (min-width: 950px) {
+    height: 380px;
+  }
+}
+
+.q-1 {
+  background-image: url('../images/q-1.jpg');
+}
+
+.q-2 {
+  background-image: url('../images/q-2.jpg');
+}
+
+.q-3 {
+  background-image: url('../images/q-3.jpg');
+}
+
+.q-4 {
+  background-image: url('../images/q-4.jpg');
+}
+
+.q-5 {
+  background-image: url('../images/q-5.png');
+}
+
+.q-6 {
+  background-image: url('../images/q-6.jpg');
+}
+
+.q-7 {
+  background-image: url('../images/q-7.jpg');
+}
+
+.q-8 {
+  background-image: url('../images/q-8.jpg');
+}
+
+.q-9 {
+  background-image: url('../images/q-9.jpg');
+}
+
+.caption {
+  transition: all .4s ease-in-out;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  font-family: @font-secundary;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 10px 5px 5px;
+  background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3) 50%, transparent 100%);
+
+  @media (min-width: 900px) {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.message {
+  font-family: @font-secundary;
+  font-size: 12px;
+  text-transform: uppercase;
+  transform-origin: 20% 180%;
+  transform: rotate(90deg);
+  display: inline-block;
+  letter-spacing: 1px;
+
+  &.second {
+    transform-origin: 15% 200%;
+  }
+}
+
+.year {
+  color: white;
+  padding: 3px 8px;
+  font-size: 13px;
+
+  &.gold {
+    background-color: @color-3;
+    margin-right: 45px;
+
+    @media (min-width: 900px) {
+      float: right;
+    }
+  }
+}
